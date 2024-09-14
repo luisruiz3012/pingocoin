@@ -1,16 +1,249 @@
 ---
-
+import Header from '../components/Header.astro';
+import Logo from '../assets/logo.png';
+import { Image } from 'astro:assets';
+import Footer from '../components/Footer.astro';
+import MobileMenu from '../containers/MobileMenu.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/logo.png' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Pingo Coin</title>
+  </head>
+  <body>
+    <Header />
+    <MobileMenu />
+    <section class='min-h-screen bg-blue-200 p-14 md:p-24'>
+      <section class='flex items-center justify-center gap-20 flex-wrap'>
+        <div
+          class='lg:w-1/2 px-10 py-20 bg-blue-400 border border-blue-500 rounded-3xl'
+        >
+          <h2 class='text-white font-customFont text-6xl'>Meet</h2>
+          <h1 class='font-customFont text-white'>Pingo</h1>
+          <p class='mt-12 text-xl text-white'>
+            <span class='font-customFont'>Pingo</span> is the next big memecoin that
+            combines the charm of everyone's favorite animal, the penguin, with the
+            energy of memecoins. With a community-driven approach and a focus on
+            fun, <span class='font-customFont'>Pingo</span> is poised to become the
+            coolest memecoin on the market.
+          </p>
+        </div>
+        <div class='md:w/1-2'>
+          <Image
+            src={Logo}
+            alt='logo'
+            class='bg-white rounded-full border-8 w-96 border-blue-500'
+          />
+        </div>
+      </section>
+    </section>
+    <section
+      id='about'
+      class='bg-blue-400 w-full min-h-screen border-t border-blue-500 py-16 px-10 md:px-24'
+    >
+      <h3 class='text-white font-customFont text-center'>About</h3>
+      <p class='text-white text-xl my-24'>
+        <span class='font-customFont'>Pingo Coin</span> is a fresh, community-driven
+        memecoin that blends the lovable charm of penguins with the dynamic energy
+        of cryptocurrency. Designed to bring both fun and opportunity to the crypto
+        space, Pingo isn't just another coin—it's a movement. Our mission is simple:
+        build a lighthearted, inclusive community where everyone can participate
+        in the journey of financial growth, all while having a blast.
+        <br />
+        <br />
+        With our adorable yet cheeky penguin mascot, <span
+          class='font-customFont'>Pingo Coin</span
+        > aims to be a symbol of resilience and adaptability, much like the penguin
+        itself. Whether you're new to crypto or a seasoned trader, Pingo offers a
+        chance to join a project that doesn’t take itself too seriously while still
+        offering serious potential.
+        <br />
+        <br />
+
+        <span class='font-customFont'>Pingo</span> is more than just a token—it's
+        an experience, a meme, and a growing community. We believe that the future
+        of crypto is not just about technology, but also about fun, creativity, and
+        connection. So whether you're here to hodl or just along for the penguin-powered
+        ride,
+        <span class='font-customFont'>Pingo Coin</span> is your ticket to the coolest
+        crypto adventure around.
+        <br />
+        <br />
+
+        Join us and start waddling towards a brighter, meme-fueled future!
+      </p>
+    </section>
+
+    <section class='min-h-screen bg-blue-200 p-10 md:p-24' id='how-to-buy'>
+      <h3 class='font-customFont text-white text-center'>How to buy</h3>
+
+      <div class='my-20 flex flex-col gap-10'>
+        <article
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+        >
+          <img src='/phantom.png' class='w-20' />
+
+          <div>
+            <h2 class='text-white font-customFont text-2xl'>
+              Download the Phantom Wallet
+            </h2>
+            <p>
+              Phantom wallet is one of the most popular Solana wallets
+              available. You can download it on IOS and Adroid or you can even
+              download the browser extension and become part of the Solana
+              ecosystem.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+        >
+          <img src='/solana.webp' class='w-20' />
+
+          <div>
+            <h2 class='text-white font-customFont text-2xl'>
+              Get some <span>$SOL</span> on your Phantom Wallet
+            </h2>
+            <p>
+              Once you have your Phantom Wallet installed and setup, it's time
+              to get some SOL to start trading. You can buy some SOL at your
+              favourite CEX and transfer some SOL to your Phantom Wallet to
+              start trading.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+        >
+          <img src='/pumpfun.png' class='w-20' />
+
+          <div>
+            <h2 class='text-white font-customFont text-2xl'>Go to Pump.fun</h2>
+            <p>
+              Once you have SOL on your phantom wallet, it's time to trade it
+              for some $PNGO. To do that, you can go to our pump.fun page:
+              <a
+                class='text-blue-600 underline font-bold'
+                href='https://pump.fun/HZhBACLZxwRbecoHsiqmbQeFha3kzWeJWXkEBDfGpump'
+                >Click here</a
+              >
+            </p>
+          </div>
+        </article>
+
+        <article
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+        >
+          <img src='/logo.png' class='w-20' />
+
+          <div>
+            <h2 class='text-white font-customFont text-2xl'>
+              Exchange some <span>$SOL</span> for some $PNGO
+            </h2>
+            <p>
+              You can exchange some SOL for $PNGO. We have ZERO taxes so you
+              don’t need to worry about buying with a specific slippage,
+              although you may need to use slippage during times of market
+              volatility.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section
+      id='why-pingo'
+      class='bg-blue-400 w-full min-h-screen border-t border-blue-500 py-16 px-10 md:px-24'
+    >
+      <h3 class='text-white font-customFont text-center'>Why Pingo?</h3>
+
+      <ul class='my-16 flex flex-col gap-10'>
+        <li class='text-2xl md:text-5xl text-white font-customFont list-disc'>
+          <b class='underline'>Community-Driven:</b> Pingo Coin is built by and for
+          its community, focusing on fun and inclusivity. Joining early means becoming
+          part of a passionate and growing community.
+        </li>
+
+        <li class='text-2xl md:text-5xl text-white font-customFont list-disc'>
+          <b class='underline'>Fun & Lighthearted:</b> Pingo brings a unique, meme-inspired
+          approach to crypto with its playful penguin mascot, making it more than
+          just an investment—it's an enjoyable experience.
+        </li>
+
+        <li class='text-2xl md:text-5xl text-white font-customFont list-disc'>
+          <b class='underline'>Low Entry Price:</b> With an affordable entry point,
+          Pingo allows new investors to get in on the ground floor with the potential
+          for significant returns as the coin gains traction.
+        </li>
+      </ul>
+    </section>
+    <Footer />
+  </body>
 </html>
+
+<style is:global>
+  * {
+    scroll-behavior: smooth;
+  }
+
+  @font-face {
+    font-family: 'Funny Sunshine';
+    src: url('/fonts/FUNNY SUNSHINE.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1,
+  h3,
+  h4 {
+    font-size: 10rem;
+    line-height: 8rem;
+    stroke: blue;
+    text-shadow:
+      2px 0 #2873ff,
+      -2px 0 #2873ff,
+      0 2px #2873ff,
+      0 -2px #2873ff,
+      1px 1px #2873ff,
+      -1px -1px #2873ff,
+      1px -1px #2873ff,
+      -1px 1px #2873ff;
+  }
+
+  h2,
+  span,
+  li {
+    text-shadow:
+      2px 0 #2873ff,
+      -2px 0 #2873ff,
+      0 2px #2873ff,
+      0 -2px #2873ff,
+      1px 1px #2873ff,
+      -1px -1px #2873ff,
+      1px -1px #2873ff,
+      -1px 1px #2873ff;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1,
+    h3 {
+      font-size: 7rem;
+      text-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    h1,
+    h3 {
+      font-size: 6rem;
+      text-wrap: wrap;
+    }
+  }
+</style>
