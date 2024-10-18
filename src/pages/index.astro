@@ -83,7 +83,7 @@ import MobileMenu from '../containers/MobileMenu.astro';
 
       <div class='my-20 flex flex-col gap-10'>
         <article
-          class='w-full flex items-center justify-start gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+          class='w-full flex items-center justify-start gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10 text-lg'
         >
           <img
             src='//images.ctfassets.net/9sy2a0egs6zh/2qy1wS5MmZOXkXn9yFlGJp/f3797a512c283e6f71450abd408b7452/mm-logo-white.svg'
@@ -91,8 +91,8 @@ import MobileMenu from '../containers/MobileMenu.astro';
           />
 
           <div>
-            <h2 class='text-white font-customFont text-2xl'>
-              Download the Metamask Wallet
+            <h2 class='text-white font-customFont text-4xl'>
+              Download Metamask
             </h2>
             <p>
               Metamask is one of the most popular crypto wallets on the market.
@@ -103,7 +103,7 @@ import MobileMenu from '../containers/MobileMenu.astro';
         </article>
 
         <article
-          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10 text-lg'
         >
           <img
             src='https://shido.io/wp-content/uploads/2023/12/Image-2.svg'
@@ -111,8 +111,8 @@ import MobileMenu from '../containers/MobileMenu.astro';
           />
 
           <div>
-            <h2 class='text-white font-customFont text-2xl'>
-              Get some <span>$SHIDO</span> on your Metamask Wallet
+            <h2 class='text-white font-customFont text-4xl'>
+              Get some <span>$SHIDO</span>
             </h2>
             <p>
               Once you have your Metamasl Wallet installed and setup, it's time
@@ -124,12 +124,12 @@ import MobileMenu from '../containers/MobileMenu.astro';
         </article>
 
         <article
-          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10 text-lg'
         >
-          <img src='https://gempad.app/logo/logo.svg' class='w-10' />
+          <img src='https://gempad.app/logo/logo.svg' class='w-16 pl-4' />
 
           <div>
-            <h2 class='text-white font-customFont text-2xl'>
+            <h2 class='text-white font-customFont text-4xl'>
               Go to Gempad.app
             </h2>
             <p>
@@ -145,13 +145,13 @@ import MobileMenu from '../containers/MobileMenu.astro';
         </article>
 
         <article
-          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10'
+          class='w-full flex items-center justify-center gap-10 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10 text-lg'
         >
           <img src='/logo.png' class='w-20' />
 
           <div>
-            <h2 class='text-white font-customFont text-2xl'>
-              Exchange some <span>$SHIDO</span> for some $PINGO
+            <h2 class='text-white font-customFont text-4xl'>
+              Exchange <span>$SHIDO</span> for $PINGO
             </h2>
             <p>
               You can trade some $SHIDO for $PINGO. We have ZERO taxes so you
@@ -190,6 +190,27 @@ import MobileMenu from '../containers/MobileMenu.astro';
         </li>
       </ul>
     </section>
+
+    <section class='min-h-screen bg-blue-200 p-10 md:p-24' id='how-to-buy'>
+      <h5 class='font-customFont text-white text-center'>Tokenomics</h5>
+
+      <article
+        class='w-full flex items-center justify-start gap-4 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10 text-lg my-12 flex-col mt-24'
+      >
+        <h5 class='font-customFont text-5xl'>Total Supply:</h5>
+        <h5 class='font-customFont text-4xl'>50,000,000 $PINGO</h5>
+      </article>
+
+      <article
+        class='w-full flex items-center justify-start gap-4 flex-wrap md:flex-nowrap text-white bg-blue-400 rounded-lg border-2 border-blue-500 p-10 text-lg my-12 flex-col'
+      >
+        <h5 class='font-customFont text-5xl'>Token Address:</h5>
+        <h5 class='font-customFont text-4xl'>
+          shido1yks7fv3zwrqcx25ya5zfm7yqhetxq5v094u2yx
+        </h5>
+      </article>
+    </section>
+
     <Footer />
   </body>
 </html>
@@ -224,6 +245,21 @@ import MobileMenu from '../containers/MobileMenu.astro';
       -1px 1px #2873ff;
   }
 
+  h5 {
+    font-size: 10rem;
+    line-height: 8rem;
+    stroke: blue;
+    text-shadow:
+      2px 0 #2873ff,
+      -2px 0 #2873ff,
+      0 2px #2873ff,
+      0 -2px #2873ff,
+      1px 1px #2873ff,
+      -1px -1px #2873ff,
+      1px -1px #2873ff,
+      -1px 1px #2873ff;
+  }
+
   h2,
   span,
   li {
@@ -244,12 +280,22 @@ import MobileMenu from '../containers/MobileMenu.astro';
       font-size: 7rem;
       text-wrap: wrap;
     }
+
+    h5 {
+      font-size: 5rem;
+      text-wrap: wrap;
+    }
   }
 
   @media screen and (max-width: 380px) {
     h1,
     h3 {
       font-size: 6rem;
+      text-wrap: wrap;
+    }
+
+    h5 {
+      font-size: 4rem;
       text-wrap: wrap;
     }
   }
