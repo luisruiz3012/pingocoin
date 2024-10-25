@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Logo from '../assets/logo.png';
+import Swap from '../assets/swap.jpg';
 import { Image } from 'astro:assets';
 import Footer from '../components/Footer.astro';
 import MobileMenu from '../containers/MobileMenu.astro';
@@ -235,7 +236,7 @@ import MobileMenu from '../containers/MobileMenu.astro';
         it's own swap platform. Stay tuned for any updates on our social media
       </p>
 
-      <img src='../assets/swap.JPG' class='w-fit my-20' />
+      <Image src={Swap} class="class='w-fit my-20" alt='Swap platform' />
     </section>
     <Footer />
   </body>
